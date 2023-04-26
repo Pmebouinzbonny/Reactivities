@@ -1,4 +1,5 @@
 import React from 'react';
+import 'react-calendar/dist/Calendar.css';
 import ReactDOM from 'react-dom';
 import 'semantic-ui-css/semantic.min.css';
 import './app/layout/styles.css';
