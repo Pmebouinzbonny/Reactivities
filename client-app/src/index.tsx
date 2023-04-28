@@ -1,6 +1,6 @@
 import React from 'react';
 import 'react-calendar/dist/Calendar.css';
-import ReactDOM from 'react-dom';
+import 'react-toastify/dist/ReactToastify.min.css';
 import 'semantic-ui-css/semantic.min.css';
 import './app/layout/styles.css';
 import App from './app/layout/App';
@@ -8,12 +8,19 @@ import reportWebVitals from './reportWebVitals';
 import { StoreContext, store } from './app/stores/store';
 import { router } from './app/router/Routes';
 import { RouterProvider } from 'react-router-dom';
+import ReactDOM from 'react-dom/client';
 
-ReactDOM.render(
+
+
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+
+root.render(
   <StoreContext.Provider value={store}>
     <RouterProvider router= {router} />
   </StoreContext.Provider>,
-  document.getElementById('root')
+  //document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
