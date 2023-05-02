@@ -4,6 +4,9 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
+using Microsoft.AspNetCore.Authorization;
+
+
 namespace API.Controllers
 {
     public class ActivitiesController : BaseApiController
