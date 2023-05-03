@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -43,13 +39,20 @@ namespace API.Controllers
             return Unauthorized();
         }
         
-        [AllowAnonymous]
+     
         [HttpPost("register")]
         public async Task<ActionResult<USerDto>> Register(RegisterDto registerDto)
         {
             if (await _userManager.Users.AnyAsync(x => x.Email == registerDto.EMail))
             {
-                return BadRequest("Email is already taken");
+                ModelState.AddModelError("email", "Email taken");
+                return ValidationProblem();
+            }
+            
+            if (await _userManager.Users.AnyAsync(x => x.UserName == registerDto.UserName))
+            {
+                ModelState.AddModelError("username", "Username taken");
+                return ValidationProblem();
             }
 
 
