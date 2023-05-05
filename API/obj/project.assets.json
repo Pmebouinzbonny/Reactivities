@@ -1096,6 +1096,19 @@
           "bin/placeholder/Domain.dll": {}
         }
       },
+      "Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infrastructure.dll": {}
+        }
+      },
       "Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -2878,6 +2891,11 @@
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
     },
+    "Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
+    },
     "Persistence/1.0.0": {
       "type": "project",
       "path": "../Persistence/Persistence.csproj",
@@ -2887,6 +2905,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Application >= 1.0.0",
+      "Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.5",
       "Microsoft.AspNetCore.OpenApi >= 7.0.4",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
@@ -2901,11 +2920,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pmebouinzbonny\\Reactivities\\api\\API.csproj",
+      "projectUniqueName": "C:\\Users\\pmebouinzbonny\\Reactivities\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\pmebouinzbonny\\Reactivities\\api\\API.csproj",
+      "projectPath": "C:\\Users\\pmebouinzbonny\\Reactivities\\API\\API.csproj",
       "packagesPath": "C:\\Users\\pmebouinzbonny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pmebouinzbonny\\Reactivities\\api\\obj\\",
+      "outputPath": "C:\\Users\\pmebouinzbonny\\Reactivities\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pmebouinzbonny\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2924,6 +2943,9 @@
           "projectReferences": {
             "C:\\Users\\pmebouinzbonny\\Reactivities\\Application\\Application.csproj": {
               "projectPath": "C:\\Users\\pmebouinzbonny\\Reactivities\\Application\\Application.csproj"
+            },
+            "C:\\Users\\pmebouinzbonny\\Reactivities\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\pmebouinzbonny\\Reactivities\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
